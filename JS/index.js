@@ -52,6 +52,12 @@ document.getElementById('calculate').addEventListener('click',function(event){
 })
 
 
+
+
+
+
+
+
 document.getElementById('calculate-savings').addEventListener('click', function(event){
    event.preventDefault();
 

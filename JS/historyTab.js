@@ -10,7 +10,9 @@ document.getElementById('history-tab').addEventListener('click',function(){
     
     //hiding the calculation form
     document.getElementById('expense-form').classList.add('hidden')
-    //unhide history section
-    document.getElementById('history-section').classList.remove('hidden')
+    
+
+    ////unhide history section
+    // document.getElementById('history-section').classList.remove('hidden')
 
 })
