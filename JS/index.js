@@ -7,21 +7,39 @@ document.getElementById('calculate').addEventListener('click',function(event){
   const internet = getInputFieldValueByID('internet')
   
 
-  //see console as a table+as an object
-  console.table({income,software,courses,internet})
   
 
-  //make the results section unhidden
-  document.getElementById('results').classList.remove('hidden')
+  //see console as a table+as an object
+  console.table({income,software,courses,internet})
 
   //calculation
   const totalExpense = software+courses+internet;
   const balance = income-totalExpense;
   
+  
 
-  //place the calculated amount
+
+
+
+  ///////////////Logical Error//////////////
+  if(totalExpense>income){
+    document.getElementById('logic-error').classList.remove('hidden');
+    return
+  }
+
+
+
+
+
+  //place the calculated amount in the top
   document.getElementById('total-expenses').innerText = totalExpense.toFixed(2)
   document.getElementById('balance').innerText = balance.toFixed(2);
+
+  //make the results section unhidden
+  document.getElementById('results').classList.remove('hidden')
+
+
+
 
 
 
@@ -50,6 +68,8 @@ document.getElementById('calculate').addEventListener('click',function(event){
   */
   document.getElementById('history-list').insertBefore(log , document.getElementById('history-list').firstChild)
 })
+
+
 
 
 
